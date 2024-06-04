@@ -5,7 +5,7 @@ from catboost import CatBoostRegressor
 import json
 
 
-with open('../models/input_example.json', 'r') as json_file:
+with open('models/input_example.json', 'r') as json_file:
     example = json.load(json_file)
 
 class FastApiHandler:
@@ -20,7 +20,7 @@ class FastApiHandler:
             "model_params": dict
         }
 
-        self.model_path = "../models/model.cb"
+        self.model_path = "models/model.cb"
         self.load_model(model_path=self.model_path)
         
         # Необходимые параметры для предсказаний модели оттока

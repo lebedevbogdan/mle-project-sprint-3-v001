@@ -2,7 +2,7 @@
 
 
 from fastapi import FastAPI, Body
-from handler import FastApiHandler
+from ml_service.handler import FastApiHandler
 
 import json
 
@@ -12,7 +12,7 @@ app = FastAPI()
 # Создаем обработчик запросов для API
 app.handler = FastApiHandler()
 
-with open('../models/input_example.json', 'r') as json_file:
+with open('models/input_example.json', 'r') as json_file:
     example = json.load(json_file)
 example_dict = dict(zip(example['columns'], example['data'][0]))
 
