@@ -36,9 +36,9 @@ docker compose up --build
 2. Prometheus http://localhost:9090
 3. Grafana http://localhost:3000/
 
-### 4 Запуск скрипта, симулируюзего нагрузку на сервис
+### 4 Запуск скрипта, симулирующего нагрузку на сервис
 Запуск из корневой папки проекта
 ```
-python3 generate_requests.pydashboard
+python3 generate_requests.py
 
 ```
