@@ -6,18 +6,19 @@
 python3 -m venv .venv
 source .venv/bin/activate
 cd services
+pip install -r requirements.txt
 uvicorn ml_service.main:app --reload
 ```
 
 
 ### 2.1 FastAPI микросервис в Docker-контейнере
-Запускаем из папки services
+Запускаем из директории services
 ```
 docker image build . --tag app-price-predict:latest
 docker container run --name main-app --publish 1702:1702 -d --env-file .env --volume=./models:/services/models app-price-predict:latest
 ```
 ### 2.2 FastAPI микросервис в режиме Docker Compose
-Запускаем из папки services
+Запускаем из директории services
 ```
 docker compose up --build
 ```
