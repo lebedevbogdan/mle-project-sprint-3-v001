@@ -37,6 +37,12 @@ docker compose up --build
 2. Prometheus http://localhost:9090
 3. Grafana http://localhost:3000/
 
+Чтобы визуализации отображались на дэшборде нужно в настройках дэшборда изменить uid у datasource. 
+
+Текущий uid datasource можно найти так: DataSources -> Prometheus -> значение в url после последнего слеша
+
+Замена значений: Dashboards -> Имортированный Dashboard -> Settings -> JSON model -> "Найти и заменить" -> Save changes
+
 ### 4 Запуск скрипта, симулирующего нагрузку на сервис
 Запуск из корневой папки проекта
 ```
